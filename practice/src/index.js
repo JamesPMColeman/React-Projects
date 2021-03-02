@@ -3,20 +3,43 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
+// CSS
+import './index.css'
 
-function Greeting() {
+function BookList() {
 	return (
-		<div>
-			<h2>Hello World</h2> 
-			<Person />
-			<Message />
-		</div>
+		<section className='booklist'>
+			<Book />
+			<Book />
+			<Book />
+			<Book />
+			<Book />
+			<Book />
+			<Book />
+		</section>
 	);
 }
 
-const Person = () => <h4>Hello user</h4>;
-const Message = () => {
-	return <p>Welcome to this component</p>;
+const Book = () => {
+	return (
+		<article className='book'>
+			<Title />
+			<Author />
+			<Image />
+		</article>
+	)
 };
 
-ReactDom.render(<Greeting/>,document.getElementById('root'));
+const Image = () => (
+	<img 
+		src="https://upload.wikimedia.org/wikipedia/en/thumb/d/de/House_of_leaves.jpg/220px-House_of_leaves.jpg"
+     	alt=''
+    />            
+);
+
+const Author = () => <article>Mark Danialaziskie</article>;
+const Title = () => <h1>House of Leaves</h1>;
+
+
+
+ReactDom.render(<BookList/>,document.getElementById('root'));
