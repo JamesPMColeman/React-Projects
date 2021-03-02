@@ -37,7 +37,14 @@ const Image = () => (
     />            
 );
 
-const Author = () => <article>Mark Danialaziskie</article>;
+const Author = () => (	
+	<h4 style={{
+		color: '#617d98', 
+		fontSize: '0.75rem', 
+		marginTop: '0.25rem'
+	}}>Mark Danialaziskie</h4>
+);
+
 const Title = () => <h1>House of Leaves</h1>;
 
 
